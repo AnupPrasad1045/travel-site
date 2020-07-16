@@ -34,6 +34,10 @@
     font-weight: 100;
 }
 
+strong {
+    font-weight: 400;
+  }
+
 .headline--b-margin-small {
     margin-bottom: .5em;
 }

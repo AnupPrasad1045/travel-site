@@ -1,0 +1,27 @@
+.section-title {
+    font-size: 2.55rem;
+    font-weight: 300;
+    text-align: center;
+
+    @mixin atSmall {
+        font-size: 3.75rem;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+}
+
+.section-title__icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .6rem;
+
+    @mixin atSmall {                  /* mixin is called media query. We have defined in mixin.css */
+        margin-right: .5rem;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: inline-block;        /* we adding this so that on large screen it don't break the text ne newline */
+    }
+}
