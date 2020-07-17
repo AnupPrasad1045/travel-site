@@ -6,7 +6,30 @@
     }
 }
 
+.page-section--no-b-padding-until-medium {
+    padding-bottom: 0;
+    @mixin atMedium {
+        padding-bottom: 4.5rem;
+    }
+}
+
+.page-section--no-b-padding-until-large {
+    padding-bottom: 0;
+    @mixin atLarge {
+        padding-bottom: 4.5rem;
+    }
+}
+
 .page-section--blue {
     background-color: $mainBlue;
     color: #FFF;
+}
+
+.page-section--testimonials {
+    background-color: #e0e6ef;
+
+    @mixin atLarge{
+        background: url('/assets/images/testimonials-bg.jpg') top center no repeat;    /*this is not working*/
+        background-size: cover;   /* here we are telling that image should not shrink and should be contained in the div*/
+    }
 }

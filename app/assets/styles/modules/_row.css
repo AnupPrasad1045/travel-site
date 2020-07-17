@@ -3,6 +3,10 @@
     }
 }
 
+.row--t-padding {
+    padding-top: 80px;
+}
+
 .row__b-margin-until-medium {
     margin-bottom: 1rem;
 }
@@ -36,6 +40,35 @@
     }
 }
 
+@mixin atLarge {
+
+    .row__b-margin-until-large {
+        margin-bottom: 0;
+    }
+    .row__large-4 {
+        float: left;
+        width: 33.33%;
+    }
+
+    .row__large-4--larger {
+        width: 37%;
+    }
+
+    .row__large-6 {
+        float: left;
+        width: 50%;
+    }
+    
+    .row__large-8 {
+        float: left;
+        width: 66.66%;
+    }   
+    
+    .row__large-8--smaller {
+        width: 63%;
+    }
+}
+
 .row--gutters {
     padding-right: -65px;
 }
@@ -44,10 +77,42 @@
     padding-right: -100px;
 }
 
+.row--gutter-small {
+    margin-right: -45px;
+}
+
 .row--gutters > div {
     padding-right: 65px;
 }
 
 .row--gutters-large > div {
     padding-right: 100px;
+}
+
+.row--gutters-small > div {
+    margin-right: 45px;
+}
+
+/*  Below is the rule to make equal height for all the testimonials */
+
+.row--equal-height-at-medium {
+    @mixin atMedium {
+        display: flex;
+    }
+
+    & > div {
+        float: none;
+        display: flex;
+    }
+}
+
+.row--equal-height-at-large {
+    @mixin atLarge {
+        display: flex;
+    }
+
+    & > div {
+        float: none;
+        display: flex;
+    }
 }
