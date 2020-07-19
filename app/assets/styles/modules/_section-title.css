@@ -16,6 +16,11 @@
     color: $mainBlue;     /* this color is not reflecting on web page. Everything looks correct even though its not reflecting*/
 }
 
+&--less-margin {
+    margin-bottom: 1.3rem;
+    margin-top: 0;
+}
+
 .section-title__icon {
     display: block;
     margin-left: auto;

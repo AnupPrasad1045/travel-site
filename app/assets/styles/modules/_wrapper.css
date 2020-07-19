@@ -16,6 +16,10 @@
     max-width: 976px;
 }
 
+.wrapper--narrow {
+    max-width: 470px;
+}
+
 .wrapper--b-margin {
     margin-bottom: 1rem;
     @mixin atSmall {
