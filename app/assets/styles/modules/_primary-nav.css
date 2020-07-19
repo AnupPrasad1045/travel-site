@@ -1,0 +1,59 @@
+.primary-nav {
+    padding-top: 10px;
+    @mixin atMedium {
+        padding-top: 0;
+    }
+
+    &--pull-right {
+        @mixin atMedium {          /* mixin is called as media query */
+            float: right;   
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix {
+
+        }
+    }
+    li {
+        list-style: none;
+        display: inline-block;          /* this will allow the links in horizontaly centerd */
+        padding-right: 7px;
+        @mixin atMedium {
+            padding-right: 20px;
+            float: left;
+            display: block;
+        }
+    }
+
+    li:last-child {
+        padding-right: 0;
+        @mixin atMedium {
+            padding-right: 20px;
+        }
+    }
+
+    a {
+        color: #FFF;
+        font-weight: 300;
+        text-decoration: none;
+        display: block;
+        padding: 5px 08px;
+        font-size: .8rem;
+        background-color: rgba(47, 85, 114, .5);           /*background-color: rgba($mainBlue, .55) is also ot working*/
+
+        @mixin atMedium {
+            font-size: 1rem;
+            padding: 12px 0;
+            background-color: transparent;
+        }
+    }
+}
+
+/*
+.primary-nav--pull-right {              ******* such sections which are present in all the classes are called as primary rules.
+    float: right;                           **** this seciton has been embaded in class itself
+}
+*/
